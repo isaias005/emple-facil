@@ -1,10 +1,101 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {}
-});
+  state: {
+    jobs: [
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Senior Frontend Engineer",
+        companyAddress: "Calle #2 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Javascript Engineer",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Contador",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Albañil",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Software Engineer, Frontend",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Senior Full Stack Developer, Javascript [REMOTE]",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Lead Frontend Engineer - React",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      },
+      {
+        companyName: "Compañia",
+        phoneNumber: "809-000-0000",
+        email: "compañia@gmail.com",
+        contactName: "contacto",
+        jobTitle: "Frontend Developer",
+        companyAddress: "Calle #1 de compañia, Santo Domingo",
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+      }
+    ]
+  },
+  mutations: {
+    publishJob(state, payload) {
+      state.jobs.push(payload)
+    }
+  },
+  actions: {
+    publishJob(context, payload) {
+      context.commit('publishJob', payload);
+    }
+  },
+  getters: {
+    recentJobs: state => {
+      return state.jobs.slice(0, 4)
+    },
+    searchedJobs: state => {
+      return state.jobs.slice(0, 6)
+    }
+  }
+})
