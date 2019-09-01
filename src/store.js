@@ -13,7 +13,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Senior Frontend Engineer",
         companyAddress: "Calle #2 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -22,7 +23,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Javascript Engineer",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -31,7 +33,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Contador",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -40,7 +43,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Albañil",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -49,7 +53,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Software Engineer, Frontend",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -58,7 +63,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Senior Full Stack Developer, Javascript [REMOTE]",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -67,7 +73,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Lead Frontend Engineer - React",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       },
       {
         companyName: "Compañia",
@@ -76,7 +83,8 @@ export default new Vuex.Store({
         contactName: "contacto",
         jobTitle: "Frontend Developer",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
-        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia."
+        jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
+        jobSalary: "$20000 - $40000"
       }
     ]
   },

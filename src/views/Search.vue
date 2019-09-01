@@ -54,18 +54,28 @@
             <v-card-title class="title">Filtrar resultados</v-card-title>
             <v-card-text>
               <div class="py-2">
-                <span class="subtitle text--primary">Tipo de trabajo</span>
-                <v-radio-group class="mt-0">
-                  <v-radio label="Tiempo Completo"></v-radio>
-                  <v-radio label="Temporal"></v-radio>
-                  <v-radio label="Por contrato"></v-radio>
-                </v-radio-group>
-              </div>
-              <div class="py-2">
-                <span class="subtitle text--primary">Clasificar por</span>
+                <span class="subtitle text--primary">Ordenar por</span>
                 <v-radio-group class="mt-0">
                   <v-radio label="Fecha"></v-radio>
                   <v-radio label="Relevancia"></v-radio>
+                </v-radio-group>
+              </div>
+              <div class="py-2">
+                <span class="subtitle text--primary">Tipo de trabajo</span>
+                <v-radio-group class="mt-0">
+                  <v-radio label="Tiempo completo"></v-radio>
+                  <v-radio label="Por contrato"></v-radio>
+                  <v-radio label="Pasantía"></v-radio>
+                </v-radio-group>
+              </div>
+              <div class="py-2">
+                <span class="subtitle text--primary">Compensación</span>
+                <v-radio-group class="mt-0">
+                  <v-text-field
+                    label="Salario mensual mínimo"
+                    type="number"
+                    append-icon="attach_money"
+                  ></v-text-field>
                 </v-radio-group>
               </div>
             </v-card-text>
@@ -77,8 +87,11 @@
               <v-card to="#" class="py-5" tile outlined width="100%" :key="index">
                 <v-card-title class="title">{{job.jobTitle}}</v-card-title>
                 <v-card-text>
-                  <span class="text--primary">{{job.companyName}}</span>
-                  - {{job.companyAddress}}
+                  <div>
+                    <span class="text--primary">{{job.companyName}}</span>
+                    - {{job.companyAddress}}
+                  </div>
+                  <span class="primary--text" v-if="job.jobSalary">{{job.jobSalary}}</span>
                 </v-card-text>
                 <div class="mx-4 my-3">
                   <v-chip label color="primary">ReactJS</v-chip>
