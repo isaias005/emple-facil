@@ -42,7 +42,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
+    <v-container fluid>
       <v-row class="text-center">
         <v-col cols="12" class="pt-12">
           <span class="display-1">Resultados</span>
@@ -81,10 +81,10 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="9">
+        <v-col cols="4">
           <v-card class="job-list">
             <template class="pa-0" v-for="(job,index) in searchedJobs">
-              <v-card to="#" class="py-5" tile outlined width="100%" :key="index">
+              <v-card @click="previewJob(job)" class="py-5" tile outlined width="100%" :key="index">
                 <v-card-title class="title">{{job.jobTitle}}</v-card-title>
                 <v-card-text>
                   <div>
@@ -103,6 +103,15 @@
             </template>
           </v-card>
         </v-col>
+        <v-col cols="5">
+          <v-card v-if="currentPreviewedJob">
+            <v-card-title>{{currentPreviewedJob.jobTitle}}</v-card-title>
+            <v-divider></v-divider>
+            <v-card-text>
+              {{currentPreviewedJob.jobDescription}}
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
   </v-content>
@@ -111,17 +120,24 @@
 <script>
 export default {
   name: "Search",
-  data: () => ({}),
+  data: () => ({
+    currentPreviewedJob:null
+  }),
   computed: {
     searchedJobs() {
       return this.$store.getters.searchedJobs;
+    }
+  },
+  methods:{
+    previewJob(job){
+      this.currentPreviewedJob = job
     }
   }
 };
 </script>
 
 <style scoped>
-.v-card.v-card--outlined {
+.job-list .v-card.v-card--outlined {
   border-top: none;
   border-left: none;
   border-right: none;

@@ -8,7 +8,7 @@
 
 <script>
 import Navbar from "./components/shared/Navbar";
-import BottomNavigation from "./components/shared/BottomNavigation"
+import BottomNavigation from "./components/shared/BottomNavigation";
 export default {
   name: "App",
   components: {
