@@ -16,6 +16,11 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: () => import('./views/Search')
+    },
+    {
+      path: '/publish',
+      name: 'publish',
+      component: () => import('./views/Publish')
     }
   ]
 })

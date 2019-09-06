@@ -10,7 +10,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Senior Frontend Engineer",
         companyAddress: "Calle #2 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.",
@@ -20,7 +19,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Javascript Engineer",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -30,7 +28,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Contador",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -40,7 +37,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Albañil",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -50,7 +46,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Software Engineer, Frontend",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -60,7 +55,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Senior Full Stack Developer, Javascript [REMOTE]",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -70,7 +64,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Lead Frontend Engineer - React",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -80,7 +73,6 @@ export default new Vuex.Store({
         companyName: "Compañia",
         phoneNumber: "809-000-0000",
         email: "compañia@gmail.com",
-        contactName: "contacto",
         jobTitle: "Frontend Developer",
         companyAddress: "Calle #1 de compañia, Santo Domingo",
         jobDescription: "Hacer funciones en la compañia que son muy importantes para su funcionamiento correcto en el mercado laboral.Hacer funciones en la compañia.",
@@ -102,8 +94,10 @@ export default new Vuex.Store({
     recentJobs: state => {
       return state.jobs.slice(0, 4)
     },
-    searchedJobs: state => {
-      return state.jobs.slice(0, 6)
+    searchedJobs: state => (searchedJobTitle,searchedJobAddress) => {
+      if(searchedJobTitle && searchedJobTitle!=" "){
+        return state.jobs.filter(job=>job.jobTitle.toLowerCase().includes(searchedJobTitle.toLowerCase()))
+      }
     }
   }
 })

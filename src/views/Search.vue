@@ -3,32 +3,33 @@
     <v-container fluid class="pa-0">
       <v-row>
         <v-col cols="12" class="py-0">
-          <v-card color="primary" class="py-12" tile flat dark>
-            <v-card-title class="display-1 justify-center">¿Buscas trabajo?</v-card-title>
-            <v-form>
+          <v-card color="primary" class="py-12" tile flat>
+            <v-card-title class="display-1 justify-center white--text">¿Buscas trabajo?</v-card-title>
+            <v-form @submit.prevent="submitSearch">
               <v-container>
                 <v-row class="justify-center">
                   <v-col cols="4">
                     <v-text-field
                       placeholder="Puesto, palabras clave o empresa"
                       solo
-                      light
                       flat
                       append-icon="search"
+                      v-model="searchedJobTitle"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="4">
                     <v-text-field
                       placeholder="Provincia, ciudad o codigo postal"
                       solo
-                      light
                       flat
                       append-icon="room"
+                      v-model="searchedJobAddress"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="2" class>
                     <v-btn
-                      class="text-capitalize"
+                      type="submit"
+                      class="text-capitalize white--text"
                       color="#0E4380"
                       depressed
                       block
@@ -107,9 +108,7 @@
           <v-card v-if="currentPreviewedJob">
             <v-card-title>{{currentPreviewedJob.jobTitle}}</v-card-title>
             <v-divider></v-divider>
-            <v-card-text>
-              {{currentPreviewedJob.jobDescription}}
-            </v-card-text>
+            <v-card-text>{{currentPreviewedJob.jobDescription}}</v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -121,16 +120,20 @@
 export default {
   name: "Search",
   data: () => ({
-    currentPreviewedJob:null
+    currentPreviewedJob: null,
+    searchedJobs: null,
+    searchedJobTitle: "",
+    searchedJobAddress: ""
   }),
-  computed: {
-    searchedJobs() {
-      return this.$store.getters.searchedJobs;
-    }
-  },
-  methods:{
-    previewJob(job){
-      this.currentPreviewedJob = job
+  methods: {
+    submitSearch() {
+      this.searchedJobs = this.$store.getters.searchedJobs(
+        this.searchedJobTitle,
+        this.searchedJobAddress
+      );
+    },
+    previewJob(job) {
+      this.currentPreviewedJob = job;
     }
   }
 };

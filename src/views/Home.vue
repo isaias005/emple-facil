@@ -3,8 +3,8 @@
     <v-container fluid class="pa-0">
       <v-row>
         <v-col cols="12" class="py-0">
-          <v-card color="primary" class="py-12" tile flat dark>
-            <v-card-title class="display-1 justify-center">¿Buscas trabajo?</v-card-title>
+          <v-card color="primary" class="py-12" tile flat>
+            <v-card-title class="display-1 justify-center white--text">¿Buscas trabajo?</v-card-title>
             <v-form>
               <v-container>
                 <v-row class="justify-center">
@@ -12,7 +12,6 @@
                     <v-text-field
                       placeholder="Puesto, palabras clave o empresa"
                       solo
-                      light
                       flat
                       append-icon="search"
                     ></v-text-field>
@@ -21,14 +20,13 @@
                     <v-text-field
                       placeholder="Provincia, ciudad o codigo postal"
                       solo
-                      light
                       flat
                       append-icon="room"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="2" class>
                     <v-btn
-                      class="text-capitalize"
+                      class="text-capitalize white--text"
                       color="#0E4380"
                       depressed
                       block
